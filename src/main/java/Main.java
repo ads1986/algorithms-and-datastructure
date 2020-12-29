@@ -1,13 +1,21 @@
 import com.algorithms.BFS;
+import com.algorithms.DFS;
 import com.datastructure.TreeNode;
 
 public class Main {
 
     public static void main(String args[]){
-
         //BFS
         System.out.println("########## BFS ##########");
-        System.out.print("| Found : " + BFS.search(getTree(), "g"));
+        System.out.println("| Found : " + BFS.search(getTree(), "g"));
+
+        //DFS
+        System.out.println("########## DFS ##########");
+        System.out.print("Preorder : ");
+        DFS.traversePreorder(getTree());
+        System.out.println("");
+        System.out.print("Inorder : ");
+        DFS.traverseInOrder(getTree());
     }
 
 
