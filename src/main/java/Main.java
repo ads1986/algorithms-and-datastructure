@@ -1,21 +1,38 @@
 import com.algorithms.BFS;
 import com.algorithms.DFS;
+import com.datastructure.LinkedList;
 import com.datastructure.TreeNode;
 
 public class Main {
 
     public static void main(String args[]){
-        //BFS
-        System.out.println("########## BFS ##########");
+        System.out.println("########## Algorithm -> BFS ##########");
         System.out.println("| Found : " + BFS.search(getTree(), "g"));
 
-        //DFS
-        System.out.println("########## DFS ##########");
+        System.out.println("");
+
+        System.out.println("########## Algorithm -> DFS ##########");
         System.out.print("Preorder : ");
         DFS.traversePreorder(getTree());
         System.out.println("");
         System.out.print("Inorder : ");
         DFS.traverseInOrder(getTree());
+
+        System.out.println("");
+
+        System.out.println("");
+        System.out.println("########## Datastructure -> LinkedList ##########");
+        LinkedList<String> list = new LinkedList<>();
+        System.out.println("ADD -> [Paul, Richard, Melanie]");
+        list.add("Paul");
+        list.add("Richard");
+        list.add("Melanie");
+        System.out.println("Total Elements : " + list.size());
+        System.out.println("FIND -> Richard");
+        System.out.println("Found : " + list.find("Richard"));
+        System.out.println("REMOVE -> Richard");
+        list.remove("Richard");
+        System.out.println("Total Elements : " + list.size());
     }
 
 
