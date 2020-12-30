@@ -31,7 +31,7 @@ public class Main {
         System.out.println("FIND -> Richard");
         System.out.println("Found : " + list.find("Richard"));
         System.out.println("REMOVE -> Richard");
-        list.remove("Melanie");
+        list.remove("Richard");
         System.out.println("Total Elements : " + list.size());
     }
 
