@@ -28,22 +28,18 @@ public class LinkedList<T> {
     /**
      * Removing node
      * Time complexity : O(n)
-     * Space complexity: O(1)
+     * Space complexity: O(n)
      * */
     public void remove(T t){
-        if (node != null) {
-            /*Node temp = this.node;
+        Node temp = this.node;
+        this.node = null;
+        this.count = 0;
 
-            while (temp != null) {
-                if (temp.data == t) {
-                    Node next = temp.next;
-                    temp = null;
-                    temp = next;
-                    break;
-                }
-
-                temp = temp.next;
-            }*/
+        while (temp != null){
+            if (temp.data != t){
+                add((T) temp.data);
+            }
+            temp = temp.next;
         }
     }
 
