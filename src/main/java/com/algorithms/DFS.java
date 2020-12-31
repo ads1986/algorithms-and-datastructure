@@ -1,10 +1,10 @@
 package com.algorithms;
 
-import com.datastructure.TreeNode;
+import com.datastructure.Tree;
 
 public class DFS {
 
-    public static void traversePreorder(TreeNode node) {
+    public static void traversePreorder(Tree node) {
 
         if (node != null){
 
@@ -15,7 +15,7 @@ public class DFS {
         }
     }
 
-    public static void traverseInOrder(TreeNode node) {
+    public static void traverseInOrder(Tree node) {
 
         if (node != null){
             traversePreorder(node.left);

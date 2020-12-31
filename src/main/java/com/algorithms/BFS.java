@@ -1,6 +1,6 @@
 package com.algorithms;
 
-import com.datastructure.TreeNode;
+import com.datastructure.Tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -8,7 +8,7 @@ import java.util.Queue;
 public class BFS {
 
 
-    public static int search(TreeNode node, String nodeName) {
+    public static int search(Tree node, String nodeName) {
 
         if (node == null || nodeName == null || nodeName.isEmpty())
             return -1;
@@ -20,10 +20,10 @@ public class BFS {
             return 1;
         }
 
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<Tree> queue = new LinkedList<>();
         queue.add(node);
 
-        TreeNode root;
+        Tree root;
 
         while(!queue.isEmpty()){
             root = queue.poll();

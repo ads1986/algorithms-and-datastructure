@@ -1,26 +1,26 @@
 import com.algorithms.BFS;
 import com.algorithms.DFS;
+import com.datastructure.Graph;
 import com.datastructure.LinkedList;
-import com.datastructure.TreeNode;
+import com.datastructure.Tree;
 
 public class Main {
 
     public static void main(String args[]){
         System.out.println("########## Algorithm -> BFS ##########");
-        System.out.println("| Found : " + BFS.search(getTree(), "g"));
+        System.out.println("| Found : " + BFS.search(createTree(), "g"));
 
         System.out.println("");
 
         System.out.println("########## Algorithm -> DFS ##########");
         System.out.print("Preorder : ");
-        DFS.traversePreorder(getTree());
+        DFS.traversePreorder(createTree());
         System.out.println("");
         System.out.print("Inorder : ");
-        DFS.traverseInOrder(getTree());
+        DFS.traverseInOrder(createTree());
 
         System.out.println("");
 
-        System.out.println("");
         System.out.println("########## Datastructure -> LinkedList ##########");
         LinkedList<String> list = new LinkedList<>();
         System.out.println("ADD -> [Paul, Richard, Melanie]");
@@ -33,6 +33,9 @@ public class Main {
         System.out.println("REMOVE -> Richard");
         list.remove("Richard");
         System.out.println("Total Elements : " + list.size());
+
+        System.out.println("########## Datastructure -> Graph ##########");
+        Graph graph = createGraph();
     }
 
 
@@ -50,20 +53,48 @@ public class Main {
      *            (j)
      * @return
      */
-    public static TreeNode getTree(){
-        TreeNode j = new TreeNode("J");
-        TreeNode h = new TreeNode("H", null, j);
-        TreeNode g = new TreeNode("G", h, null);
-        TreeNode l = new TreeNode("L");
-        TreeNode k = new TreeNode("K", g, l);
+    public static Tree createTree(){
+        Tree j = new Tree("J");
+        Tree h = new Tree("H", null, j);
+        Tree g = new Tree("G", h, null);
+        Tree l = new Tree("L");
+        Tree k = new Tree("K", g, l);
 
-        TreeNode c = new TreeNode("C");
-        TreeNode a = new TreeNode("A");
-        TreeNode b = new TreeNode("B", a, c);
-        TreeNode e = new TreeNode("E");
-        TreeNode d = new TreeNode("D", b, e);
+        Tree c = new Tree("C");
+        Tree a = new Tree("A");
+        Tree b = new Tree("B", a, c);
+        Tree e = new Tree("E");
+        Tree d = new Tree("D", b, e);
 
-        return new TreeNode("F", d, k);
+        return new Tree("F", d, k);
+    }
+
+    /**
+     * Create a Tree Data Structure
+     *
+     *          (f)
+     *         /   \
+     *      (d)    (k)
+     *     /  \    /  \
+     *   (b) (e) (g) (l)
+     *   / \     /
+     *(a)  (c)  (h)
+     *            \
+     *            (j)
+     * @return
+     */
+    public static Graph createGraph(){
+        Graph graph = new Graph();
+
+        graph.addEdge("0", "1");
+        graph.addEdge("1", "2");
+        graph.addEdge("2", "3");
+        graph.addEdge("3", "4");
+        graph.addEdge("0", "4");
+        graph.addEdge("1", "4");
+        graph.addEdge("1", "3");
+
+        return graph;
     }
 
 }

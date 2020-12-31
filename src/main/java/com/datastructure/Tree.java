@@ -4,24 +4,24 @@ package com.datastructure;
  *  Tree datastructure
  *
  */
-public class TreeNode {
+public class Tree {
     public String name;
-    public TreeNode left;
-    public TreeNode right;
+    public Tree left;
+    public Tree right;
 
-    public TreeNode() {}
+    public Tree() {}
 
-    public TreeNode(String name) {
+    public Tree(String name) {
         this.name = name;
     }
 
-    public TreeNode(String name, TreeNode left, TreeNode right) {
+    public Tree(String name, Tree left, Tree right) {
         this.name = name;
         this.left = left;
         this.right = right;
     }
 
-    public TreeNode(TreeNode left, TreeNode right) {
+    public Tree(Tree left, Tree right) {
         this.left = left;
         this.right = right;
     }
