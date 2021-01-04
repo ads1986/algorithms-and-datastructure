@@ -3,6 +3,7 @@ import com.algorithms.DFS;
 import com.datastructure.Graph;
 import com.datastructure.LinkedList;
 import com.datastructure.Tree;
+import com.datastructure.trie.Trie;
 
 public class Main {
 
@@ -36,6 +37,13 @@ public class Main {
 
         System.out.println("########## Datastructure -> Graph ##########");
         Graph graph = createGraph();
+
+        System.out.println("########## Datastructure -> Trie ##########");
+        Trie trie = new Trie();
+        System.out.println("Insert -> cars");
+        trie.insert("cars");
+        System.out.println("Search -> cars: " + trie.search("cars"));
+        System.out.println("Search -> car: " + trie.search("car"));
     }
 
 
@@ -70,17 +78,14 @@ public class Main {
     }
 
     /**
-     * Create a Tree Data Structure
+     * Create a Graph Data Structure
      *
-     *          (f)
+     *          (0)
      *         /   \
-     *      (d)    (k)
-     *     /  \    /  \
-     *   (b) (e) (g) (l)
-     *   / \     /
-     *(a)  (c)  (h)
-     *            \
-     *            (j)
+     *      (4)----(1)
+     *       \  /  /
+     *      (3)---(2)
+     *
      * @return
      */
     public static Graph createGraph(){
