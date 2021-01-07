@@ -1,4 +1,4 @@
-package com.datastructure;
+package com.datastructure.graph;
 
 import java.util.ArrayList;
 import java.util.HashSet;

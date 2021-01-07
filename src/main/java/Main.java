@@ -1,6 +1,7 @@
 import com.algorithms.BFS;
 import com.algorithms.DFS;
-import com.datastructure.Graph;
+import com.datastructure.Heaps;
+import com.datastructure.graph.Graph;
 import com.datastructure.LinkedList;
 import com.datastructure.Tree;
 import com.datastructure.trie.Trie;
@@ -44,6 +45,14 @@ public class Main {
         trie.insert("cars");
         System.out.println("Search -> cars: " + trie.search("cars"));
         System.out.println("Search -> car: " + trie.search("car"));
+
+        System.out.println("########## Datastructure -> Heaps ##########");
+        int maxHeap[] = {43,19,35,12,4,2,20,6};
+        Heaps heaps = new Heaps(maxHeap);
+        System.out.println("Max value : " + heaps.maxValue());
+        System.out.println("Min value : " + heaps.minValue());
+        System.out.println("Insert Element : " + heaps.minValue());
+        System.out.println(heaps);
     }
 
 
