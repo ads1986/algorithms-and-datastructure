@@ -47,12 +47,19 @@ public class Main {
         System.out.println("Search -> car: " + trie.search("car"));
 
         System.out.println("########## Datastructure -> Heaps ##########");
-        int maxHeap[] = {43,19,35,12,4,2,20,6};
-        Heaps heaps = new Heaps(maxHeap);
-        System.out.println("Max value : " + heaps.maxValue());
-        System.out.println("Min value : " + heaps.minValue());
-        System.out.println("Insert Element : " + heaps.minValue());
-        System.out.println(heaps);
+        int maxArr[] = {43,19,35,12,4,2,20,6};
+        Heaps maxHeap = new Heaps(maxArr);
+        System.out.println(maxHeap);
+        System.out.println("Valid Max Heap " + maxHeap.isValidMaxHeap());
+
+        System.out.println("");
+
+        int minArr[] = {5,12,20,25,13};
+        Heaps minHeap = new Heaps(minArr);
+        System.out.println(minHeap);
+        System.out.println("Valid Min Heap " + minHeap.isValidMinHeap());
+
+
     }
 
 

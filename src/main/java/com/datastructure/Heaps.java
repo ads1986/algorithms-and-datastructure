@@ -10,27 +10,35 @@ public class Heaps {
         this.arr = arr;
     }
 
-    /*public boolean isValid(){
+    public boolean isValidMaxHeap(){
+        for (int i = 0; i < arr.length; i++){
+            int leftIndex = (2*i) + 1;
+            if (leftIndex < arr.length && arr[i] < arr[leftIndex])
+                return false;
 
-        for (int i = 0; i < arr.length; i++)
-
+            int rightIndex = (2*i) + 2;
+            if (rightIndex < arr.length && arr[i] < arr[rightIndex])
+                return false;
+        }
 
         return true;
-    }*/
-
-    public int minValue(){
-        if (arr[arr.length - 1] < arr[0])
-            return arr[arr.length - 1];
-        return arr[0];
     }
 
-    public int maxValue(){
-        if (arr[0] > arr[arr.length - 1])
-            return arr[0];
-        return arr[arr.length - 1];
+    public boolean isValidMinHeap(){
+        for (int i = 0; i < arr.length; i++){
+            int leftIndex = (2*i) + 1;
+            if (leftIndex < arr.length && arr[i] > arr[leftIndex])
+                return false;
+
+            int rightIndex = (2*i) + 2;
+            if (rightIndex < arr.length && arr[i] > arr[rightIndex])
+                return false;
+        }
+
+        return true;
     }
 
-    public int insert(){
+    public void deleteElement(int element){
 
     }
 
