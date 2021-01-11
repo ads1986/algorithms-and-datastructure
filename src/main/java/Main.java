@@ -1,6 +1,6 @@
 import com.algorithms.BFS;
 import com.algorithms.DFS;
-import com.datastructure.Heaps;
+import com.datastructure.Heap;
 import com.datastructure.graph.Graph;
 import com.datastructure.LinkedList;
 import com.datastructure.Tree;
@@ -46,19 +46,35 @@ public class Main {
         System.out.println("Search -> cars: " + trie.search("cars"));
         System.out.println("Search -> car: " + trie.search("car"));
 
+        System.out.println("");
+
         System.out.println("########## Datastructure -> Heaps ##########");
+
+        System.out.println("");
+
         int maxArr[] = {43,19,35,12,4,2,20,6};
-        Heaps maxHeap = new Heaps(maxArr);
-        System.out.println(maxHeap);
-        System.out.println("Valid Max Heap " + maxHeap.isValidMaxHeap());
+        Heap maxHeap = new Heap(maxArr);
+        System.out.println("[Max Heap]");
+        System.out.println("Current -> " + maxHeap + " -> (Is Valid ? " + (maxHeap.isValidMaxHeap() ? "Yes" : "No") + ")");
+        System.out.println("Inserting element -> 50");
+        maxHeap.insert(50);
+        System.out.println("Current -> " + maxHeap + " -> (Is Valid ? " + (maxHeap.isValidMaxHeap() ? "Yes" : "No") + ")");
+        System.out.println("Removing element -> 50");
+        maxHeap.remove(50);
+        System.out.println("Current -> " + maxHeap + " -> (Is Valid ? " + (maxHeap.isValidMaxHeap() ? "Yes" : "No") + ")");
 
         System.out.println("");
 
         int minArr[] = {5,12,20,25,13};
-        Heaps minHeap = new Heaps(minArr);
-        System.out.println(minHeap);
-        System.out.println("Valid Min Heap " + minHeap.isValidMinHeap());
-
+        Heap minHeap = new Heap(minArr);
+        System.out.println("[Min Heap]");
+        System.out.println("Current -> " + minHeap + " -> (Is Valid ? " + (minHeap.isValidMinHeap() ? "Yes" : "No") + ")");
+        System.out.println("Inserting element -> 1");
+        minHeap.insert(1);
+        System.out.println("Current -> " + minHeap + " -> (Is Valid ? " + (minHeap.isValidMinHeap() ? "Yes" : "No") + ")");
+        System.out.println("Removing element -> 1");
+        minHeap.remove(1);
+        System.out.println("Current -> " + minHeap + " -> (Is Valid ? " + (minHeap.isValidMinHeap() ? "Yes" : "No") + ")");
 
     }
 
