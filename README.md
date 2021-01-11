@@ -13,8 +13,8 @@
 
 ### Main graph theory algorithms
 
-- [Breadth First Search](https://github.com/williamfiset/algorithms/tree/master/src/main/java/com/williamfiset/algorithms/graphtheory/BreadthFirstSearchAdjacencyListIterativeFastQueue.java)
-- [Depth First Search](https://github.com/williamfiset/algorithms/tree/master/src/main/java/com/williamfiset/algorithms/graphtheory/BreadthFirstSearchAdjacencyListIterativeFastQueue.java)
+- [Breadth First Search](https://github.com/ads1986/algorithms-and-datastructure/blob/main/src/main/java/com/algorithms/BFS.java)
+- [Depth First Search](https://github.com/ads1986/algorithms-and-datastructure/blob/main/src/main/java/com/algorithms/DFS.java)
 
 # License
 
